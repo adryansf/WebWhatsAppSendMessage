@@ -1,16 +1,16 @@
 <p align="center">
 
-<img src="https://user-images.githubusercontent.com/31359652/74533815-388ca080-4f11-11ea-95c4-40185f2580f9.jpg" width="300" /><br/>
+<img src="https://user-images.githubusercontent.com/31359652/74533815-388ca080-4f11-11ea-95c4-40185f2580f9.jpg" width="300" /><br>
 
-<img src="https://user-images.githubusercontent.com/31359652/74535485-b00fff00-4f14-11ea-9497-78b37a4eebcb.png" width="500" /><br/>
+<img src="https://user-images.githubusercontent.com/31359652/74535485-b00fff00-4f14-11ea-9497-78b37a4eebcb.png" width="500" /><br>
 
-<img src="https://user-images.githubusercontent.com/31359652/74535489-b0a89580-4f14-11ea-9e40-ae32b147fadb.png" width="500" /><br/>
+<img src="https://user-images.githubusercontent.com/31359652/74535489-b0a89580-4f14-11ea-9e40-ae32b147fadb.png" width="500" /><br>
 
 </p>
 
 # WebWhatsAppSendMessage
 
-O WebWhatsAppSendMessage é um automatizador de envio de mensagem via WebWhatsApp. Basta ter uma lista de contatos em xlsx.
+**O WebWhatsAppSendMessage é um automatizador de envio de mensagem via WebWhatsApp. Basta ter uma lista de contatos em xlsx.**
 
 ## Vantagens
 
@@ -34,13 +34,13 @@ O WebWhatsAppSendMessage é um automatizador de envio de mensagem via WebWhatsAp
 
 ### Linux
 
-Nas distribuições baseadas no Ubuntu, é aconselhável executar os seguintes comandos:
+**Nas distribuições baseadas no Ubuntu, é aconselhável executar os seguintes comandos:**
 
 `sudo apt-get update && sudo apt-get install pkg-config build-essential`
 
 ### Para todas as plataformas.
 
-Clone o repositório.
+**Clone o repositório.**
 
 `git clone https://github.com/adryansf/WebWhatsAppSendMessage.git`
 
@@ -56,6 +56,42 @@ Realize o build.
 
 Execute o script  
 `npm start` ou `yarn start`
+
+## Como utilizar os dados de uma tabela ?
+
+**Exemplo de uma tabela válida.**  
+<img src="https://user-images.githubusercontent.com/31359652/74536813-97551880-4f17-11ea-8071-63286b581151.png" width="200" /><br>
+
+**Depois de criar uma tabela basta exportá-la no formato XLSX**
+**Após clique no botão _Importar contato_ e selecione a tabela.**
+
+## Como verificar os envios que falharam ?
+
+**Basta entrar na pasta:**
+
+> src/whatsapp/fails.txt
+
+## Como alterar o código do país ?
+
+**Entre na pasta:**
+
+> src/whatsapp
+
+**Edite o arquivo NumberOfCountry.json**
+
+```
+{
+  "code": "Código do País(Entre aspas)"
+}
+```
+
+## É possível utilizar o código sem a interface ?
+
+**Sim. Basta ter um pouco de conhecimento de JSON. Vá até a pasta**
+
+> src/whatsapp
+
+**Edite os arquivos JSON como preferir, após execute o script sendWithoutInterface.js**
 
 ## Plataformas que já foram testadas.
 
