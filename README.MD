@@ -1,10 +1,8 @@
 <p align="center">
 
-![icon](https://user-images.githubusercontent.com/31359652/74533815-388ca080-4f11-11ea-95c4-40185f2580f9.jpg)
-
-![app](https://user-images.githubusercontent.com/31359652/74535485-b00fff00-4f14-11ea-9497-78b37a4eebcb.png)
-
-![WhatsApp](https://user-images.githubusercontent.com/31359652/74535489-b0a89580-4f14-11ea-9e40-ae32b147fadb.png)
+<img src="https://user-images.githubusercontent.com/31359652/74533815-388ca080-4f11-11ea-95c4-40185f2580f9.jpg" width="300" />  
+<img src="https://user-images.githubusercontent.com/31359652/74535485-b00fff00-4f14-11ea-9497-78b37a4eebcb.png" width="500" />  
+<img src="https://user-images.githubusercontent.com/31359652/74535489-b0a89580-4f14-11ea-9e40-ae32b147fadb.png" width="500" />
 
 </p>
 
@@ -36,7 +34,7 @@ O WebWhatsAppSendMessage é um automatizador de envio de mensagem via WebWhatsAp
 
 Nas distribuições baseadas no Ubuntu, é aconselhável executar os seguintes comandos:
 
-`sudo apt-get update, seguido de sudo apt-get install pkg-config build-essential`
+`sudo apt-get update && sudo apt-get install pkg-config build-essential`
 
 ### Para todas as plataformas.
 
@@ -65,6 +63,8 @@ Execute o script
 ## Autores
 
 | [<img src="https://avatars3.githubusercontent.com/u/31359652?s=460&v=4" width=115><br><sub>@adryansf</sub>](https://github.com/adryansf) |
+| :--------------------------------------------------------------------------------------------------------------------------------------: |
+
 
 ## Algumas das bibliotecas usadas.
 
