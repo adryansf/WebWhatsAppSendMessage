@@ -34,27 +34,35 @@
 
 ### Linux
 
-**Nas distribuições baseadas no Ubuntu, é aconselhável executar os seguintes comandos:**
+**Nas distribuições baseadas no Ubuntu, é aconselhável executar os seguintes comandos:**<br>
 
 `sudo apt-get update && sudo apt-get install pkg-config build-essential`
 
 ### Para todas as plataformas.
 
-**Clone o repositório.**
+**Clone o repositório.**<br>
 
 `git clone https://github.com/adryansf/WebWhatsAppSendMessage.git`
 
-Entre na pasta do repositório gerada.  
+<br>
+
+**Entre na pasta do repositório gerada.**<br>
 `cd WebWhatsAppSendMessage`
 
-Instale as dependências
+<br>
+
+**Instale as dependências**<br>
 
 `npm install` ou `yarn install`
 
-Realize o build.  
+<br>
+
+**Realize o build.**<br>
 `npm run build` ou `yarn build`
 
-Execute o script  
+<br>
+
+**Execute o script**<br>  
 `npm start` ou `yarn start`
 
 ## Como utilizar os dados de uma tabela ?
@@ -62,22 +70,25 @@ Execute o script
 **Exemplo de uma tabela válida.**  
 <img src="https://user-images.githubusercontent.com/31359652/74536813-97551880-4f17-11ea-8071-63286b581151.png" width="200" /><br>
 
-**Depois de criar uma tabela basta exportá-la no formato XLSX**
-**Após clique no botão _Importar contato_ e selecione a tabela.**
+**Depois de criar uma tabela basta exportá-la no formato XLSX**<br>
+
+**Após clique no botão _Importar contato_ e selecione a tabela.**<br>
 
 ## Como verificar os envios que falharam ?
 
-**Basta entrar na pasta:**
+**Basta entrar na pasta whatsapp e ir no arquivo fails.txt:**<br>
 
 > src/whatsapp/fails.txt
 
 ## Como alterar o código do país ?
 
-**Entre na pasta:**
+**Entre na pasta:**<br>
 
 > src/whatsapp
 
-**Edite o arquivo NumberOfCountry.json**
+<br>
+
+**Edite o arquivo NumberOfCountry.json**<br>
 
 ```
 {
@@ -87,11 +98,13 @@ Execute o script
 
 ## É possível utilizar o código sem a interface ?
 
-**Sim. Basta ter um pouco de conhecimento de JSON. Vá até a pasta**
+**Sim. Basta ter um pouco de conhecimento de JSON. Vá até a pasta**<br>
 
 > src/whatsapp
 
-**Edite os arquivos JSON como preferir, após execute o script sendWithoutInterface.js**
+<br>
+
+**Edite os arquivos JSON como preferir, após execute o script sendWithoutInterface.js**<br>
 
 ## Plataformas que já foram testadas.
 
