@@ -2,7 +2,7 @@
 
 <img src="https://user-images.githubusercontent.com/31359652/74533815-388ca080-4f11-11ea-95c4-40185f2580f9.jpg" width="300" /><br>
 
-<img src="https://user-images.githubusercontent.com/31359652/74535485-b00fff00-4f14-11ea-9497-78b37a4eebcb.png" width="500" /><br>
+<img src="https://user-images.githubusercontent.com/31359652/74578673-dcf3fe80-4f74-11ea-80ac-0a1fad5cc360.png" width="500" /><br>
 
 <img src="https://user-images.githubusercontent.com/31359652/74535489-b0a89580-4f14-11ea-9e40-ae32b147fadb.png" width="500" /><br>
 
@@ -22,7 +22,6 @@
 
 ## Desvantagens
 
-- [x] Não é possível executar outras tarefas ao mesmo tempo do envio.
 - [x] Nem todas as plataformas possuem suporte.
 
 ## Requisitos

@@ -15,8 +15,7 @@ import { message as messageSave } from "../../whatsapp/Message.json";
 import SendMessage from "../../whatsapp/send";
 
 export default function Content() {
-  const [contacts, setContacts] = useState([]);
-  const [contactsText, setText] = useState("");
+  let contacts = [];
   const [isSendWithSuccess, setSuccess] = useState(null);
   let message = "";
   const msg = useRef();
@@ -28,29 +27,19 @@ export default function Content() {
   useEffect(() => {
     message = messageSave;
     msg.current.native.setPlainText(message);
-    setContacts(ListOfContacts);
   }, []);
-
-  useEffect(() => {
-    let newContactsText = "";
-    contacts.map(contact => {
-      newContactsText += `${contact?.name + ":"} ${contact.phone}
-`;
-    });
-    setText(newContactsText);
-  }, [contacts]);
 
   const fileRead = file => {
     const sheets = xlsx.parse(file);
     const prepareContacts = sheets[0].data.map(value => {
-      if (value[0].toUpperCase() === "NOME") {
-        return;
+      if (value[1]) {
+        return {
+          name: value[0] ? value[0].toString() : null,
+          phone: value[1].toString()
+        };
       }
 
-      return {
-        name: value[0],
-        phone: value[1].toString()
-      };
+      return;
     });
 
     const preparedContacts = prepareContacts.filter(
@@ -63,7 +52,7 @@ export default function Content() {
       err => {}
     );
 
-    setContacts(preparedContacts);
+    contacts = preparedContacts;
   };
 
   const textChanged = useEventHandler(
@@ -79,8 +68,12 @@ export default function Content() {
     {
       clicked: () => {
         fileDialog.exec();
-        const selectedFiles = fileDialog.selectedFiles();
-        selectedFiles.map(fileRead);
+        try {
+          const selectedFiles = fileDialog.selectedFiles();
+          if (selectedFiles) {
+            selectedFiles.map(fileRead);
+          }
+        } catch (e) {}
       }
     },
     []
@@ -89,13 +82,13 @@ export default function Content() {
   const btnHandleSubmit = useEventHandler(
     {
       clicked: async () => {
-        await fs.writeFile(
+        fs.writeFile(
           resolve(__dirname, "..", "..", "whatsapp", "Message.json"),
           JSON.stringify({ message }),
           err => {}
         );
 
-        setSuccess(await SendMessage());
+        setSuccess(await SendMessage(contacts, message));
       }
     },
     []
@@ -104,11 +97,9 @@ export default function Content() {
   return (
     <View styleSheet={contentStyle}>
       <View styleSheet={area1Style}>
-        <PlainTextEdit
-          text={contactsText}
-          enabled={false}
-          minSize={{ height: 250, width: 100 }}
-        />
+        <Text>
+          Os contatos não ficam armazenados em cache! Aguarde novas versões
+        </Text>
         <Button
           text="Importar Contatos"
           on={btnHandleContacts}
@@ -146,14 +137,17 @@ const btnStyle = `
   padding:10px;
   color: #fff;
   background: #7159c1;
+  min-width:150px;
 `;
 
 const area1Style = `
   flex-direction: column;
   flex:1;
+  min-width: 150px;
 `;
 
 const area2Style = `
-  flex:1;
+  flex:2;
   flex-direction: column;
+  min-width: 350px;
 `;

@@ -2,10 +2,8 @@ const pup = require("puppeteer");
 
 const errors = require("./errors");
 const { code } = require("./NumberOfCountry.json");
-const contacts = require("./ListOfContacts.json");
-const { message } = require("./Message.json");
 
-const SendMessage = async () => {
+const SendMessage = async (contacts, message) => {
   const browser = await pup.launch({
     headless: false,
     defaultViewport: null
